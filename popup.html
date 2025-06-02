@@ -1,54 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Auto Note Saver</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      width: 300px;
-      padding: 10px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 6px;
-      margin-bottom: 10px;
-    }
-    button {
-      margin: 5px 0;
-      width: 100%;
-      padding: 8px;
-    }
-  </style>
-</head>
-<body>
-  <h3>Saved Notes</h3>
-  <ul id="notesList"></ul>
-
-  <input type="text" id="newNote" placeholder="Add a note..." />
-  <button id="addNote">Add Note</button>
-  <button id="saveTxt">Save as TXT</button>
-  <button id="savePdf">Save as PDF</button>
-  <button id="clearNotes">Clear All</button>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="popup.js"></script>
-  <script type="module">
-  import { jsPDF } from './jspdf.umd.min.js';
-  window.jsPDF = jsPDF;
-</script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +7,9 @@
 </head>
 <body>
   <h1>Auto Note Saver</h1>
-  <ul id="notesList"></ul>
+
+<input type="text" id="searchInput" placeholder="Search notes..." />
+  <ol id="notesList"></ol>
 
   <div class="btn-group">
     <button class="save" id="saveTxt">Save as TXT</button>
