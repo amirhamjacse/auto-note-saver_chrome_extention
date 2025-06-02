@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Auto Note Saver</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <h1>📝 Your Notes</h1>
-  <ul id="notesList"></ul>
-  <button id="clearBtn">Clear All</button>
+  <h2>Auto Note Saver</h2>
+
+  <textarea id="notes" rows="10" placeholder="Your notes will appear here..."></textarea>
+
+  <div class="buttons">
+    <button id="saveTxt">Save as TXT</button>
+    <button id="savePdf">Save as PDF</button>
+    <button id="clearNotes">Clear Notes</button>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
