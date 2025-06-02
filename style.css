@@ -2,11 +2,14 @@ body {
   font-family: Arial, sans-serif;
   padding: 10px;
   width: 300px;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
 }
 
 h1 {
   font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
 }
 
 ul {
@@ -21,13 +24,60 @@ li {
   font-size: 14px;
 }
 
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group button {
+  flex: 1;
+  margin: 0 4px;
+}
+
+.btn-group button:first-child {
+  margin-left: 0;
+}
+
+.btn-group button:last-child {
+  margin-right: 0;
+}
+
 button {
-  margin-top: 10px;
-  width: 100%;
-  padding: 8px;
-  background-color: #007bff;
-  border: none;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #4CAF50;
   color: white;
-  border-radius: 5px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(0);
+}
+
+/* Optional color variations for specific buttons */
+button.save {
+  background-color: #2196F3;
+}
+
+button.save:hover {
+  background-color: #1976D2;
+}
+
+button.clear {
+  background-color: #f44336;
+}
+
+button.clear:hover {
+  background-color: #d32f2f;
 }
