@@ -14,3 +14,12 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     });
   }
 });
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "saveNote" && message.note) {
+    chrome.storage.local.get({ notes: [] }, (data) => {
+      const updated = [...data.notes, message.note];
+      chrome.storage.local.set({ notes: updated });
+    });
+  }
+});
